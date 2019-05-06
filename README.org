@@ -1,7 +1,8 @@
 *  Computer Graphics Programming in OpenGL with C++_SourceCode_CGPCompanionFiles
 
 ** macOS Mojave 10.14 支持OpenGL的最新版本是 4.1  代码需要做如下修改
-
+#+begin_src c++
+ 
    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -9,3 +10,4 @@
 
    glewExperimental = GL_TRUE;
    glewInit()
+#+end_src
