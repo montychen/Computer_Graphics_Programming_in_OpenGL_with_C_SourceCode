@@ -58,10 +58,10 @@
 	 }
 
 	 void display(GLFWwindow* window, double currentTime) {
-		 glUseProgram(renderingProgram); // 把shader 加载到GUP( OpenGL pipeline)
-		 glPointSize(30.0f);  // 提供 1 个顶点数据。
-		 glDrawArrays(GL_POINTS, 0, 1);  // pipeline里的 GLSL代码（shader）开始执行。
-		 glfwSwapBuffers(window);        // 在屏幕上显示出来。
+		 glUseProgram(renderingProgram);  // 把shader 加载到GUP( OpenGL pipeline)
+		 glPointSize(30.0f);              // 提供 1 个顶点数据。
+		 glDrawArrays(GL_POINTS, 0, 1);   // pipeline里的 GLSL代码（shader）开始执行。
+		 glfwSwapBuffers(window);         // 在屏幕上显示出来。
 
 	 }
 
