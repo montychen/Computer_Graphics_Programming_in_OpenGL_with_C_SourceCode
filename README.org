@@ -60,10 +60,9 @@
 
 	 void display(GLFWwindow* window, double currentTime) {
 		 glUseProgram(renderingProgram);  // 把shader 加载到GUP( OpenGL pipeline)
-		 glPointSize(30.0f);              // 提供 1 个顶点数据。
+		 glPointSize(30.0f);              // 默认1个point对应1个pixel的大小。 这里把1个point设置成30个像素的大小。
 		 glDrawArrays(GL_POINTS, 0, 1);   // pipeline里的 GLSL代码（shader）开始执行。 这里指定的图元类型是 GL_POINTS
 		 glfwSwapBuffers(window);         // 在屏幕上显示出来。
-
 	 }
 
 	 int main(void) {
