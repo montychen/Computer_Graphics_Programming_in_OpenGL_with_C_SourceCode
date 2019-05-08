@@ -53,14 +53,15 @@
 
 	 void init(GLFWwindow* window) {
 		 renderingProgram = createShaderProgram();
-		 glGenVertexArrays(numVAOs, vao);
-		 glBindVertexArray(vao[0]);
+		 glGenVertexArrays(numVAOs, vao); // numVAOs指定要创建VAO的数量, vao用来保存新创建vao的标识符。 
+		 glBindVertexArray(vao[0]);       // 在这个例子中，其实没用到vao， 因为仅有的一个顶点数据硬编码在顶点着色器里了。
+	                                      // 只是OpenGL规范要求，至少要提供一个vao，所以这里就创建了一个。 
 	 }
 
 	 void display(GLFWwindow* window, double currentTime) {
 		 glUseProgram(renderingProgram);  // 把shader 加载到GUP( OpenGL pipeline)
 		 glPointSize(30.0f);              // 提供 1 个顶点数据。
-		 glDrawArrays(GL_POINTS, 0, 1);   // pipeline里的 GLSL代码（shader）开始执行。
+		 glDrawArrays(GL_POINTS, 0, 1);   // pipeline里的 GLSL代码（shader）开始执行。 这里指定的图元类型是 GL_POINTS
 		 glfwSwapBuffers(window);         // 在屏幕上显示出来。
 
 	 }
